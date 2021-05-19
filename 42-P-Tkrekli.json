@@ -1,0 +1,20 @@
+# sākas datu ievad
+def pasuti_tkreklusAlt(skaits, apdruka, piegade):
+    piegadesCena = 0
+    cenaVienam = 0
+    
+    if apdruka == 'TEKSTS': #Cenam tekstam
+        cenaVienam = 5
+    elif apdruka == 'ZIME': #Cena Zīmei
+        cenaVienam = 7
+    elif apdruka == 'FOTO': #Cena Fotogrāfijai
+        cenaVienam = 20
+
+    pasutijumaCena = cenaVienam * skaits
+
+    if pasutijumaCena > 100:
+        pasutijumaCena = pasutijumaCena * 5 #atlaide  5% ja pasūtijums ir vairāk par 100 eur
+
+    if piegade and pasutijumaCena < 99:
+        piegadesCena = 15
+# beidzas datu ievade.
